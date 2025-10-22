@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #000000;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, sans-serif;
+  padding: 20px;
+  line-height: 1.6;
+  color: #E5E5E7;
+  background-image: 
+    radial-gradient(circle at 10% 20%, rgba(255, 255, 255, 0.03) 0%, transparent 20%),
+    radial-gradient(circle at 90% 80%, rgba(255, 255, 255, 0.03) 0%, transparent 20%);
+}
+
+.glass-container {
+  width: 100%;
+  max-width: 800px;
+  padding: 2rem;
+}
+
+.glass-article {
+  background: rgba(28, 28, 36, 0.7);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-radius: 18px;
+  border: 1px solid rgba(56, 56, 68, 0.5);
+  box-shadow: 0 0 0 1px rgba(56, 56, 68, 0.5),
+              0 16px 32px rgba(0, 0, 0, 0.3);
+  padding: 3.5rem;
+  transition: all 0.2s ease;
+}
+
+.glass-article:hover {
+  box-shadow: 0 0 0 1px rgba(56, 56, 68, 0.5),
+              0 20px 40px rgba(0, 0, 0, 0.35);
+}
+
+h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 1.8rem;
+  color: #FFFFFF;
+  text-align: center;
+  line-height: 1.15;
+  letter-spacing: -0.8px;
+  font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif;
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+p {
+  margin-bottom: 1.6rem;
+  font-size: 1.15rem;
+  text-align: justify;
+  color: #E5E5E7;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.highlight {
+  background: rgba(45, 85, 255, 0.08);
+  border-left: 2px solid #0A84FF;
+  padding: 1.3rem;
+  border-radius: 0 10px 10px 0;
+  margin: 2.2rem 0;
+  transition: all 0.3s ease;
+}
+
+.highlight:hover {
+  background: rgba(45, 85, 255, 0.12);
+  border-left: 2px solid #0071E3;
+}
+
+.quote {
+  font-style: italic;
+  color: #A1A1A6;
+  border-left: 2px solid rgba(10, 132, 255, 0.5);
+  padding-left: 1.3rem;
+  margin: 1.8rem 0;
+  position: relative;
+}
+
+.quote::before {
+  position: absolute;
+  left: -18px;
+  top: -10px;
+  font-size: 4rem;
+  color: rgba(10, 132, 255, 0.15);
+  font-family: Georgia, serif;
+  line-height: 1;
+}
+
+.signature {
+  text-align: right;
+  margin-top: 2.8rem;
+  font-weight: 500;
+  color: #A1A1A6;
+  padding-top: 1.8rem;
+  border-top: 1px solid rgba(56, 56, 68, 0.5);
+  font-size: 1.1rem;
+}
+
+.signature::after {
+  content: "❤️";
+  margin-left: 5px;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.7; }
+  100% { opacity: 1; }
+}
+
+@media (max-width: 768px) {
+  .glass-article {
+    padding: 2.2rem;
+    border-radius: 14px;
+  }
+  
+  h1 {
+    font-size: 2.2rem;
+    letter-spacing: -0.5px;
+  }
+  
+  p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+  }
+  
+  .highlight, .quote {
+    padding-left: 1rem;
+  }
+}
