@@ -336,6 +336,75 @@ body {
   animation: pulse 2s infinite;
 }
 
+/* Адаптивная структура занятия — вместо таблицы */
+.lesson-stages {
+  margin: 1.8rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.stage-card {
+  background: rgba(28, 28, 36, 0.7);
+  border: 1px solid rgba(56, 56, 68, 0.5);
+  border-radius: 12px;
+  padding: 1.4rem;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.stage-header {
+  font-size: 1.25rem;
+  color: #FFFFFF;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.stage-header small {
+  color: #A1A1A6;
+  font-weight: normal;
+  margin-left: 0.4rem;
+}
+
+.stage-row {
+  display: flex;
+  margin-bottom: 0.8rem;
+}
+
+.stage-label {
+  flex: 0 0 120px;
+  font-weight: 500;
+  color: #0A84FF;
+  font-size: 0.95rem;
+}
+
+.stage-content {
+  flex: 1;
+  color: #E5E5E7;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* На мобильных — уменьшаем отступы и подстраиваем метки */
+@media (max-width: 600px) {
+  .stage-card {
+    padding: 1.2rem;
+  }
+
+  .stage-header {
+    font-size: 1.15rem;
+  }
+
+  .stage-row {
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+
+  .stage-label {
+    flex: none;
+  }
+}
+
 /* Animations */
 @keyframes pulse {
   0% { opacity: 1; }
